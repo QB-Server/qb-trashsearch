@@ -18,10 +18,10 @@ ply.Functions.AddMoney("cash", money)
 end)
 
 function startTimer(id, object)
-    local timer = 10 * 100
+    local timer = 10 * 1000
 
     while timer > 0 do
-        Wait(1000)
+        Wait(10)
         timer = timer - 10
         if timer == 0 then
             TriggerClientEvent('qb-trashsearch:server:removeDumpster', id, object)
