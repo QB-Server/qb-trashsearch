@@ -1,7 +1,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 local searched = {3423423424}
-local dumpsters = {-1096777189, 666561306, 1437508529, -1426008804, -228596739, 161465839, 651101403}
+local dumpsters = {-1096777189, 666561306, 1437508529, -1426008804, -228596739, 161465839, 651101403, -58485588, 1614656839, -58485588}
 local canSearch = true
 
 RegisterNetEvent('qb-trashsearch:client:searchtrash', function()
@@ -61,11 +61,11 @@ RegisterNetEvent('qb-trashsearch:client:progressbar', function(itemType)
         disableMouse = false,
         disableCombat = true,
     }, {
-        animDict = "anim@amb@business@weed@weed_inspecting_lo_med_hi@",
-        anim = "weed_crouch_checkingleaves_idle_01_inspector",
+        animDict = "amb@prop_human_bum_bin@idle_b",
+        anim = "idle_d",
         flags = 16,
     }, {}, {}, function() -- Done
-        StopAnimTask(PlayerPedId(), "anim@amb@business@weed@weed_inspecting_lo_med_hi@", "weed_crouch_checkingleaves_idle_01_inspector", 1.0)
+        StopAnimTask(PlayerPedId(), "amb@prop_human_bum_bin@idle_b", "idle_d", 1.0)
         if Config.RewardTypes[itemType].type == "item" then
             QBCore.Functions.Notify("Found Something", "success")
             TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items[Config.RewardsSmall[item].item], "add")
@@ -76,7 +76,7 @@ RegisterNetEvent('qb-trashsearch:client:progressbar', function(itemType)
             QBCore.Functions.Notify("Found Nothing", "error")
         end
     end, function() -- Cancel
-        StopAnimTask(PlayerPedId(), "anim@amb@business@weed@weed_inspecting_lo_med_hi@", "weed_crouch_checkingleaves_idle_01_inspector", 1.0)
+        StopAnimTask(PlayerPedId(), "amb@prop_human_bum_bin@idle_b", "idle_d", 1.0)
         QBCore.Functions.Notify("Stopped Searching", "error")
     end)
 end)
