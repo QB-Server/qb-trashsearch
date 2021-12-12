@@ -8,7 +8,7 @@ end)
 RegisterNetEvent('qb-trashsearch:server:recieveItem', function(item, itemAmount)
     local src = source
     local ply = QBCore.Functions.GetPlayer(src)
-    ply.Functions.AddItem(Config.RewardsSmall[item].item, itemAmount)
+    ply.Functions.AddItem(item, itemAmount)
 end)
 
 RegisterNetEvent('qb-trashsearch:server:givemoney', function(money)
@@ -18,10 +18,10 @@ ply.Functions.AddMoney("cash", money)
 end)
 
 function startTimer(id, object)
-    local timer = 10 * 1000
+    local timer = 1 * 10
 
     while timer > 0 do
-        Wait(10)
+        Wait(1)
         timer = timer - 10
         if timer == 0 then
             TriggerClientEvent('qb-trashsearch:server:removeDumpster', id, object)
