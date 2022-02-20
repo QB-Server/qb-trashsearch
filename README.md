@@ -2,7 +2,7 @@
 Creator: Doxy#3435
 
 **Dependecies**: \
-[QBCore](https://github.com/qbcore-framework]) \
+[QBCore](https://github.com/qbcore-framework) \
 [qb-target](https://github.com/BerkieBb/qb-target)
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0
