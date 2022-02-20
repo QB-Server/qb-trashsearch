@@ -1,5 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
-local searched = {}
+local searched = {3423423}
 local canSearch = true
 
 RegisterNetEvent('qb-trashsearch:client:searchtrash', function()
